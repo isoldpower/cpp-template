@@ -1,3 +1,5 @@
+BUILD_DIR ?= build
+
 rebuild:
-	cmake -S . -B build
-	cmake --build build
+	cmake -S . -B $(BUILD_DIR)
+	cmake --build $(BUILD_DIR)

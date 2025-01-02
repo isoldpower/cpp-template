@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-namespace cpp_structure::named_tools {
+namespace cpp_structure::tools {
     class NamedTools {
         private:
             std::string name;

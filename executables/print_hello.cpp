@@ -1,12 +1,14 @@
 #include <iostream>
-#include <cpp_structure/tools/tools.h>
-#include <cpp_structure/tools/named_tools.h>
+#include <cpp_template/tools/tools.h>
+#include <cpp_template/tools/named_tools.h>
+
+using namespace cpp_structure::tools;
 
 int main() {
-  cpp_structure::tools::PrintHello();
+  PrintHello();
   std::cout << std::endl;
 
-  cpp_structure::named_tools::NamedTools tools("Nikita");
+  const NamedTools tools("Nikita");
   tools.printHello();
   return 0;
 }

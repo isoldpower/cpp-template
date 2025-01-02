@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16..3.24)
-project (cpp_structure
+project (cpp_template
         VERSION 0.1.0
         DESCRIPTION "C++ template project structure"
         LANGUAGES CXX)
@@ -9,7 +9,7 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
-add_library(cxx_setup INTERFACE cpp_structure/tools)
+add_library(cxx_setup INTERFACE cpp_template/tools)
 
 target_compile_options(cxx_setup
         INTERFACE -Wall -Wpedantic -Wextra)
