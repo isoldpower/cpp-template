@@ -9,8 +9,10 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
+# Libraries list
 add_library(cxx_setup INTERFACE cpp_template/tools)
 
+# General compiler options
 target_compile_options(cxx_setup
         INTERFACE -Wall -Wpedantic -Wextra)
 target_compile_features(cxx_setup
@@ -18,5 +20,7 @@ target_compile_features(cxx_setup
 target_include_directories(cxx_setup
         INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
+# Subdirectories
+add_subdirectory(external)
 add_subdirectory(${PROJECT_NAME})
 add_subdirectory(executables)
